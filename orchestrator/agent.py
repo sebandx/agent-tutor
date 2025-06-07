@@ -24,4 +24,11 @@ root_agent = LlmAgent(
     tools=[get_time,get_weather]
 )
 
-
+# next steps 
+# student is give a question by a question agent 
+# student can answer question 
+# code is given to grading agent 
+# grading agent either returns code, or provides code to debugging agent 
+# debugging agent then returns coded back to grading agent 
+# grading agent then gives student data to learning agent
+# grading agent also returns to orchestration agent 
