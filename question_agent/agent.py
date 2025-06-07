@@ -17,8 +17,7 @@ class questionOutput(BaseModel):
     question_example_output: str = Field(description = "An example for the expected output for the provided input above.")
     question_example_explaination: str = Field(description = "An explaination for why the program provides that output for that given input.")
 
-# rename to question_agent, only name it to root_agent to use when testing in adk web
-root_agent = LlmAgent(
+question_agent = LlmAgent(
     model = MODEL_NAME,
     name = "question_agent",
     description = "generates a CS 135 question as a JSON object",
@@ -39,3 +38,6 @@ root_agent = LlmAgent(
     tools = [],
     output_key="structured_question_json"
 )
+
+# You can comment out this line unless you want to test the question agent using adk web 
+root_agent = question_agent
