@@ -4,7 +4,7 @@ from google.adk.agents import LlmAgent
 from pydantic import BaseModel, Field
 from typing import Literal 
 
-APP_NAME = "agent_comparison_app"
+APP_NAME = "agent_tutor_app"
 MODEL_NAME = "gemini-2.0-flash"
 
 class questionInput(BaseModel):
