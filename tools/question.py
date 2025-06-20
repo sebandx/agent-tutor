@@ -1,18 +1,10 @@
-# *** STEPS ON WHAT TO DO NEXT ***
-# MOVE ALL FUNCTIONS INTO THEIR OWN "TOOLS FOLDER"
-# THEN MAKE A TOOL TO RUN RACKET 
-
-# STEP #1, MOVE ALL FUNCTIONS INTO TOOL FOLDER
-
 import json
 from typing import Literal
 
-# Imports needed for the tool to function
 from google.adk.runners import Runner
 from google.adk.sessions import InMemorySessionService
 from google.genai.types import Content, Part
 
-# Import the agent and schemas the tool needs to call
 from question_agent.agent import question_agent, questionInput
 
 
@@ -27,7 +19,6 @@ async def question_tool(question_type: str, question_difficulty: Literal["easy",
 
     user_content = Content(role='user', parts=[Part(text=input)])
 
-    # We can use a fixed session for these internal sub-calls
     session_id = "question_generator_session"
     user_id = "internal_tool_user"
 

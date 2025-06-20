@@ -9,7 +9,6 @@ from tools.question import question_tool
 import json
 from typing import Literal 
 
-
 root_agent = LlmAgent(
     model="gemini-2.0-flash",
     name="orchestrator_agent",
